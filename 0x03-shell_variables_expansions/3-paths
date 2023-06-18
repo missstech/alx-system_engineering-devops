@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $(("echo $path | grep -o ":/" | wc
+echo $PATH | tr ":" "\n" | grep -v "^$" | grep -c "/"
